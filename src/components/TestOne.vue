@@ -12,8 +12,13 @@ const great = () => {
 
 const dynamicClassAndId = {
     class: "text-8xl",
-    id: "13",
+    id: 150,
 };
+
+let show = true;
+
+let opaCur =
+    "opacity - 50 cursor-not-allowed bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded";
 
 // onMounted Event Listeners এটি সব কাজ সেস করে সবার শেষে output দিবে
 onMounted(great);
@@ -30,5 +35,8 @@ onMounted(great);
     <input type="text" :id="numberOfId" />
     <p :class="h2">text</p>
 
-    <h3 :="dynamicClassAndId">Dynamic Class And ID</h3>
+    <h3 v-bind:="dynamicClassAndId">Dynamic Class And ID</h3>
+    <br />
+
+    <button v-show="show" :class="opaCur">Demo BTN</button>
 </template>
