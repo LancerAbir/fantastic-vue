@@ -13,17 +13,11 @@ let count = ref("50");
 const nameChange = () => {
     oldname.name = "New Fata kesto Developer ";
 };
-
-// async function increment() {
-//     count.value++;
-//     await nextTick();
-//     // Now the DOM is updated
-// }
 </script>
 
 <template>
     <div>
-        {{ count.value }}
+        {{ count }}
         <h3 class="text-2xl text-blue-500">ami holo</h3>
         <h3 class="text-2xl text-red-500">
             ami holo {{ oldname.name || "robin" }}
